@@ -86,8 +86,8 @@ SMOTETomek을 적용해 오버샘플링과 동시에 Tomek Links 기반 노이�
 
 | 구분 | 평균 정확도 (5-Fold) |
 |---|---|
-| SMOTETomek 적용 전 | ~85.7 ± 0.028% |
-| SMOTETomek 적용 후 | ~87.5 ± 0.021% |
+| SMOTETomek 적용 전 | ~83.92 ± 0.028% |
+| SMOTETomek 적용 후 | ~84.88 ± 0.021% | (+0.96)
 
 
 ---
