@@ -115,19 +115,20 @@ SMOTETomek을 적용해 오버샘플링과 동시에 Tomek Links 기반 노이�
 
 ```
 heart-disease-xai/
-├── README.md
+├── Heart_v2.ipynb                  # 실험 노트북 (EDA, 분석, 결과 포함)
+├── heart_disease_xai.py            # 전체 파이프라인 실행 스크립트
 ├── requirements.txt
 ├── .gitignore
-│
-├── heart_disease_xai.py       # 전체 파이프라인 실행 스크립트
-├── heart.csv                  # 데이터셋
-│
-└── images/                    # 실행 시 자동 생성되는 시각화 결과물
+├── README.md
+├── heart.csv                       # 데이터셋 (별도 다운로드 필요 ↓)
+└── images/                         # 실행 시 자동 생성
     ├── eda_distributions.png
     ├── eda_heartdisease_correlation.png
     ├── eda_pairplot.png
     ├── kfold_before_smote.png
     ├── kfold_after_smote.png
+    ├── kfold_before_smotetomek.png
+    ├── kfold_after_smotetomek.png
     ├── shap_force_person1.png
     ├── shap_force_person2.png
     ├── shap_summary_bar.png
@@ -139,19 +140,38 @@ heart-disease-xai/
 
 ## ⚙️ 설치 및 실행
 
-### 1. 의존성 설치
+### 1. 저장소 클론
+
+```bash
+git clone https://github.com/<your-username>/heart-disease-xai.git
+cd heart-disease-xai
+```
+
+### 2. 의존성 설치
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. 실행
+### 3. 데이터셋 다운로드
+
+[Kaggle - Heart Failure Prediction](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction) 에서 `heart.csv`를 다운로드한 후 프로젝트 루트에 위치시킵니다.
+
+```
+heart-disease-xai/
+├── heart.csv   ← 여기에 위치
+└── ...
+```
+
+### 4. 실행
 
 ```bash
 python heart_disease_xai.py
 ```
 
-실행 후 분석 결과 이미지가 현재 디렉토리에 자동으로 저장됩니다.
+실행 후 분석 결과 이미지가 `images/` 폴더에 자동으로 저장됩니다.
+
+> 노트북으로 단계별 결과를 확인하려면 `Heart_v2.ipynb`를 Jupyter에서 실행하세요.
 
 ---
 
